@@ -2,26 +2,6 @@
 
 @implementation ArrowKeyMovementHandler
 
-// macOS Key Down Event Handling
-- (void)keyDown:(NSEvent *)event {
-    switch ([event keyCode]) {
-        case 123: // Left arrow key
-            [self movePlayerLeft];
-            break;
-        case 124: // Right arrow key
-            [self movePlayerRight];
-            break;
-        case 126: // Up arrow key
-            [self movePlayerUp];
-            break;
-        case 125: // Down arrow key
-            [self movePlayerDown];
-            break;
-        default:
-            break;
-    }
-}
-
 // tvOS Key Command Handling
 - (void)keyCommandHandler:(UIKeyCommand *)keyCommand {
     if ([keyCommand.input isEqualToString:UIKeyInputLeftArrow]) {

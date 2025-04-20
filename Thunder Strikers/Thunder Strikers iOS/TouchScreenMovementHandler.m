@@ -1,16 +1,31 @@
 #import "TouchScreenMovementHandler.h"
+#import "GameController.h"
+
+@interface TouchScreenMovementHandler ()
+
+@property (weak, nonatomic) GameController *gameController;
+
+@end
 
 @implementation TouchScreenMovementHandler
 
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInView:touch.view];
-        [self movePlayerTo:location];
+- (instancetype)initWithGameController:(GameController *)controller {
+    self = [super init];
+    if (self) {
+        _gameController = controller;
     }
+    return self;
 }
 
-- (void)movePlayerTo:(CGPoint)location {
-    NSLog(@"Player moving to position: %@", NSStringFromCGPoint(location));
-}
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint currentLocation = [touch locationInView:touch.view];
+    CGPoint previousLocation = [touch previousLocationInView:touch.view];
 
+    CGFloat deltaX = currentLocation.x - previousLocation.x;
+    CGFloat deltaY = currentLocation.y - previousLocation.y;
+
+    // Update the plane position
+    [self.gameController movePlaneByX:deltaX y:deltaY];
+}
 @end

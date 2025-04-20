@@ -8,7 +8,6 @@
 
 /* Begin PBXFileReference section */
 		AD1DA7E72DB5589E00351C08 /* Thunder Strikers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thunder Strikers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD1DA7FC2DB5589E00351C08 /* Thunder Strikers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thunder Strikers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1DA8102DB5589E00351C08 /* Thunder Strikers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thunder Strikers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -21,15 +20,6 @@
 				GameController.m,
 			);
 			target = AD1DA7E62DB5589E00351C08 /* Thunder Strikers iOS */;
-		};
-		AD1DA82B2DB5589E00351C08 /* Exceptions for "Thunder Strikers Shared" folder in "Thunder Strikers tvOS" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Art.scnassets,
-				Assets.xcassets,
-				GameController.m,
-			);
-			target = AD1DA7FB2DB5589E00351C08 /* Thunder Strikers tvOS */;
 		};
 		AD1DA82F2DB5589E00351C08 /* Exceptions for "Thunder Strikers Shared" folder in "Thunder Strikers macOS" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -47,7 +37,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				AD1DA8272DB5589E00351C08 /* Exceptions for "Thunder Strikers Shared" folder in "Thunder Strikers iOS" target */,
-				AD1DA82B2DB5589E00351C08 /* Exceptions for "Thunder Strikers Shared" folder in "Thunder Strikers tvOS" target */,
 				AD1DA82F2DB5589E00351C08 /* Exceptions for "Thunder Strikers Shared" folder in "Thunder Strikers macOS" target */,
 			);
 			path = "Thunder Strikers Shared";
@@ -56,11 +45,6 @@
 		AD1DA7E92DB5589E00351C08 /* Thunder Strikers iOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Thunder Strikers iOS";
-			sourceTree = "<group>";
-		};
-		AD1DA7FD2DB5589E00351C08 /* Thunder Strikers tvOS */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Thunder Strikers tvOS";
 			sourceTree = "<group>";
 		};
 		AD1DA8112DB5589E00351C08 /* Thunder Strikers macOS */ = {
@@ -72,13 +56,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		AD1DA7E42DB5589E00351C08 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD1DA7F92DB5589E00351C08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -100,7 +77,6 @@
 			children = (
 				AD1DA7DE2DB5589C00351C08 /* Thunder Strikers Shared */,
 				AD1DA7E92DB5589E00351C08 /* Thunder Strikers iOS */,
-				AD1DA7FD2DB5589E00351C08 /* Thunder Strikers tvOS */,
 				AD1DA8112DB5589E00351C08 /* Thunder Strikers macOS */,
 				AD1DA7E82DB5589E00351C08 /* Products */,
 			);
@@ -110,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				AD1DA7E72DB5589E00351C08 /* Thunder Strikers.app */,
-				AD1DA7FC2DB5589E00351C08 /* Thunder Strikers.app */,
 				AD1DA8102DB5589E00351C08 /* Thunder Strikers.app */,
 			);
 			name = Products;
@@ -139,28 +114,6 @@
 			);
 			productName = "Thunder Strikers iOS";
 			productReference = AD1DA7E72DB5589E00351C08 /* Thunder Strikers.app */;
-			productType = "com.apple.product-type.application";
-		};
-		AD1DA7FB2DB5589E00351C08 /* Thunder Strikers tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AD1DA82C2DB5589E00351C08 /* Build configuration list for PBXNativeTarget "Thunder Strikers tvOS" */;
-			buildPhases = (
-				AD1DA7F82DB5589E00351C08 /* Sources */,
-				AD1DA7F92DB5589E00351C08 /* Frameworks */,
-				AD1DA7FA2DB5589E00351C08 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				AD1DA7FD2DB5589E00351C08 /* Thunder Strikers tvOS */,
-			);
-			name = "Thunder Strikers tvOS";
-			packageProductDependencies = (
-			);
-			productName = "Thunder Strikers tvOS";
-			productReference = AD1DA7FC2DB5589E00351C08 /* Thunder Strikers.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AD1DA80F2DB5589E00351C08 /* Thunder Strikers macOS */ = {
@@ -197,9 +150,6 @@
 					AD1DA7E62DB5589E00351C08 = {
 						CreatedOnToolsVersion = 16.3;
 					};
-					AD1DA7FB2DB5589E00351C08 = {
-						CreatedOnToolsVersion = 16.3;
-					};
 					AD1DA80F2DB5589E00351C08 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -220,7 +170,6 @@
 			projectRoot = "";
 			targets = (
 				AD1DA7E62DB5589E00351C08 /* Thunder Strikers iOS */,
-				AD1DA7FB2DB5589E00351C08 /* Thunder Strikers tvOS */,
 				AD1DA80F2DB5589E00351C08 /* Thunder Strikers macOS */,
 			);
 		};
@@ -228,13 +177,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		AD1DA7E52DB5589E00351C08 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD1DA7FA2DB5589E00351C08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,13 +194,6 @@
 
 /* Begin PBXSourcesBuildPhase section */
 		AD1DA7E32DB5589E00351C08 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD1DA7F82DB5589E00351C08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -332,63 +267,13 @@
 			};
 			name = Release;
 		};
-		AD1DA82D2DB5589E00351C08 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.zen.Thunder-Strikers";
-				PRODUCT_NAME = "Thunder Strikers";
-				SDKROOT = appletvos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 18.4;
-			};
-			name = Debug;
-		};
-		AD1DA82E2DB5589E00351C08 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.zen.Thunder-Strikers";
-				PRODUCT_NAME = "Thunder Strikers";
-				SDKROOT = appletvos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 18.4;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		AD1DA8312DB5589E00351C08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Thunder Strikers macOS/Thunder_Strikers_macOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -416,6 +301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Thunder Strikers macOS/Thunder_Strikers_macOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -565,15 +451,6 @@
 			buildConfigurations = (
 				AD1DA8292DB5589E00351C08 /* Debug */,
 				AD1DA82A2DB5589E00351C08 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AD1DA82C2DB5589E00351C08 /* Build configuration list for PBXNativeTarget "Thunder Strikers tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AD1DA82D2DB5589E00351C08 /* Debug */,
-				AD1DA82E2DB5589E00351C08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

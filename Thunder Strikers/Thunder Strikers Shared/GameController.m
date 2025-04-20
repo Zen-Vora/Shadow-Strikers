@@ -9,62 +9,34 @@
 
 @interface GameController ()
 
-@property (strong, nonatomic) SCNScene *scene;
-@property (strong, nonatomic) id <SCNSceneRenderer> sceneRenderer;
+@property (strong, nonatomic) SCNNode *shipNode;
 
 @end
 
 @implementation GameController
 
-- (instancetype)initWithSceneRenderer:(id <SCNSceneRenderer>)sceneRenderer {
+- (instancetype)initWithSceneRenderer:(id<SCNSceneRenderer>)sceneRenderer {
     self = [super init];
     if (self) {
         self.sceneRenderer = sceneRenderer;
         self.sceneRenderer.delegate = self;
-        
+
         // create a new scene
         SCNScene *scene = [SCNScene sceneNamed:@"Art.scnassets/ship.scn"];
-        
+
         // retrieve the ship node
-        SCNNode *ship = [scene.rootNode childNodeWithName:@"ship" recursively:YES];
-        
-        // animate the 3d object
-        [ship runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:2 z:0 duration:1]]];
-        
+        self.shipNode = [scene.rootNode childNodeWithName:@"ship" recursively:YES];
         self.scene = scene;
         self.sceneRenderer.scene = scene;
     }
     return self;
 }
 
-- (void)highlightNodesAtPoint:(CGPoint)point {
-    NSArray<SCNHitTestResult *> *hitResults = [self.sceneRenderer hitTest:point options:nil];
-    for (SCNHitTestResult *result in hitResults) {
-        // get its material
-        SCNMaterial *material = result.node.geometry.firstMaterial;
-        
-        // highlight it
-        [SCNTransaction begin];
-        [SCNTransaction setAnimationDuration:0.5];
-        
-        // on completion - unhighlight
-        [SCNTransaction setCompletionBlock:^{
-            [SCNTransaction begin];
-            [SCNTransaction setAnimationDuration:0.5];
-            
-            material.emission.contents = [SCNColor blackColor];
-            
-            [SCNTransaction commit];
-        }];
-        
-        material.emission.contents = [SCNColor redColor];
-        
-        [SCNTransaction commit];
-    }
+// Method to move the plane
+- (void)movePlaneByX:(CGFloat)x y:(CGFloat)y {
+    SCNVector3 position = self.shipNode.position;
+    position.x += x;
+    position.y += y;
+    self.shipNode.position = position;
 }
-
-- (void)renderer:(id <SCNSceneRenderer>)renderer updateAtTime:(NSTimeInterval)time {
-    // Called before each frame is rendered on the SCNSceneRenderer thread
-}
-
 @end
