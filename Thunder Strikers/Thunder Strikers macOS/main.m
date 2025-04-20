@@ -6,10 +6,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ArrowKeyMovementHandler.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // Setup code that might create autoreleased objects goes here.
+        // Initialize movement handler
+        ArrowKeyMovementHandler *movementHandler = [[ArrowKeyMovementHandler alloc] init];
+        
+        // Register key event handlers
+        NSEvent * (^keyDownHandler)(NSEvent *) = ^NSEvent * (NSEvent *event) {
+            [movementHandler keyDown:event];
+            return event;
+        };
+        [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:keyDownHandler];
     }
     return NSApplicationMain(argc, argv);
 }

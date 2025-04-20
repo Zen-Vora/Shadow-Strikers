@@ -8,7 +8,6 @@
 #import "GameViewController.h"
 #import <SceneKit/SceneKit.h>
 #import "GameController.h"
-
 @interface GameViewController ()
 
 @property (readonly) SCNView *gameView;
